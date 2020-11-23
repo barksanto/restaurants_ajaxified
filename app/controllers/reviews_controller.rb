@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
     # if it saved render that restaurants show page
     # if not, see the show page again
     if @review.save
-      redirect_to restaurant_path(@restaurant)
+      redirect_to restaurant_path(@restaurant, anchor: "review-#{@review.id}")
     else
       render 'restaurants/show'
     end
