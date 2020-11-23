@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     # we only want the create action because new
     # will not be seperate page, new will be the show page
     # the form will be on the show page
+
     resources :reviews, only: :create
   end
 end
