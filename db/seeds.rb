@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # db/seeds.rb
+puts "Cleaning database..."
+Restaurant.destroy_all
+
 puts 'Creating restaurants...'
 Restaurant.create!({
   name: "Le Dindon en Laisse",
